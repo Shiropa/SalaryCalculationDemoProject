@@ -30,7 +30,7 @@ export class EmployeeAddComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.subscription = this.bankAccountService.geEmployeeAccounts().pipe(
+    this.subscription = this.bankAccountService.getNonAssignedBankList().pipe(
       switchMap(acc => this.gradeService.getList().pipe(
         map(grades => ({acc, grades}))
       ))

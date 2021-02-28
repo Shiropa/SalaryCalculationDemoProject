@@ -14,6 +14,7 @@ export const TRANSFER_SALARY = 'transfer-salary';
 export const GET_MAIN_ACCOUNT = 'get-main-account';
 export const GET_EMP_ACCOUNTS = 'get-employee-accounts';
 export const MAIN_ACC_BALANCE_ADD = 'main-acc-balance-add';
+export const GET_NON_ASSIGNED_BANK_ACCOUNT = 'get-non-assigned-bank-account';
 
 export const GRADE = 'grade/';
 export const EMPLOYEE = 'employee/';

@@ -114,7 +114,7 @@ public class BankAccountService extends BaseService<BankAccount, BankAccountDTO>
 
 
     public List<BankAccountDTO> getNonAssignedBankList() {
-        List<BankAccount> bankAccount = repository.findByForEmployeeAndIsDeleted("Yes", "No");
+        List<BankAccount> bankAccount = repository.findNonAssignedBankAccount();
         if (bankAccount.isEmpty())
             return new ArrayList<>();
         return convertForRead(bankAccount);

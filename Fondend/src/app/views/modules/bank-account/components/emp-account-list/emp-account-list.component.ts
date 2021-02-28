@@ -54,6 +54,14 @@ export class EmpAccountListComponent implements OnInit, OnDestroy {
     });
   }
 
+  delete(bankAccount: IBankAccount) {
+    this.subscription = this.service.delete(bankAccount.oid).subscribe(res => {
+      if (res.value) {
+        this.getList();
+      }
+    });
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

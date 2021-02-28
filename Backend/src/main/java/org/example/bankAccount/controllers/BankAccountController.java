@@ -47,6 +47,11 @@ public class BankAccountController extends BaseController<BankAccount, BankAccou
 		return service.geEmployeeAccounts();
 	}
 
+	@GetMapping(path="get-non-assigned-bank-account", produces = "application/json")
+	public @ResponseBody List<BankAccountDTO> getNonAssignedBankList() {
+		return service.getNonAssignedBankList();
+	}
+
 
 }
 

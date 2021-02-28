@@ -20,7 +20,7 @@ public interface BankAccountRepository extends ServiceRepository<BankAccount> {
             "and bc.oid not in ( " +
             "select e.bank_account_oid  " +
             "from accounts.employee e  " +
-            "where e.is_deleted = 'No'", nativeQuery = true)
-    List<BankAccount> findA();
+            "where e.is_deleted = 'No')", nativeQuery = true)
+    List<BankAccount> findNonAssignedBankAccount();
 
 }

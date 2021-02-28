@@ -50,6 +50,20 @@ export class MainAccountViewComponent implements OnInit, OnDestroy {
       }
     });
   }
+
+  edit() {
+    const modalRef = this.modalService.open(BankAddComponent);
+    modalRef.componentInstance.forEmployee = 'No';
+    modalRef.componentInstance.oid = this.bank.oid;
+    modalRef.componentInstance.bank = this.bank;
+    modalRef.componentInstance.closeEventEmitter.subscribe(res => {
+      if (res) {
+        this.getMainAccount();
+        modalRef.close();
+      }
+    });
+  }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
   }

@@ -8,9 +8,9 @@ spring:
             non_contextual_creation: true
         default_schema: accounts
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: grp
-    password: grp
+    url: #DATASOURCE-URL#
+    username: #DATASOURCE-USERNAME#
+    password: #DATASOURCE-PASSWORD#
   application:
     name: demo-project
   main:

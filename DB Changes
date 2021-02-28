@@ -1,0 +1,95 @@
+CREATE TABLE accounts.grade (
+        oid varchar(128) NOT NULL,
+        grade_name varchar(128) NOT NULL,
+        grade_no int not null,
+        basic_salary numeric(20,2) NOT NULL default 0,
+        created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_on timestamp NULL,
+        is_deleted varchar(128) NOT NULL DEFAULT 'No'::character varying,
+        CONSTRAINT grade_pk PRIMARY KEY (oid),
+        CONSTRAINT grade_name_unique UNIQUE (grade_name)
+);
+
+CREATE TABLE accounts.grade_changing_record (
+        oid varchar(128) NOT NULL,
+        grade_oid varchar(128) NOT NULL,
+        applied_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        previous numeric(20,2) NOT NULL default 0,
+        present numeric(20,2) NOT NULL default 0,
+        created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_on timestamp NULL,
+        is_deleted varchar(128) NOT NULL DEFAULT 'No'::character varying,
+        CONSTRAINT grade_changing_record_pk PRIMARY KEY (oid),
+        CONSTRAINT grade_oid_fk FOREIGN KEY (grade_oid) REFERENCES accounts.grade(oid)
+);
+
+
+
+CREATE TABLE accounts.bank_account (
+        oid varchar(128) NOT NULL,
+        account_type varchar(128) NOT NULL,
+        for_employee varchar(128) NOT null DEFAULT 'Yes'::character varying,
+        account_number varchar(255) NOT NULL,
+        account_name varchar(255) NOT NULL,
+        current_balance numeric(20,2) NOT NULL default 0,
+        bank_name varchar(255) NOT NULL,
+        branch_name varchar(255) NOT NULL,
+        created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_on timestamp NULL,
+        is_deleted varchar(128) NOT NULL DEFAULT 'No'::character varying,
+        CONSTRAINT bank_account_pk PRIMARY KEY (oid),
+        CONSTRAINT account_number_unique UNIQUE (account_number)
+);
+
+CREATE TABLE accounts.employee (
+        oid varchar(128) NOT NULL,
+        employee_id int NOT NULL,
+        employee_name varchar(255) NOT NULL,
+        address varchar(255) NOT NULL,
+        mobile int NOT NULL,
+        bank_account_oid varchar(128) NOT NULL,
+        created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_on timestamp NULL,
+        is_deleted varchar(128) NOT NULL DEFAULT 'No'::character varying,
+        CONSTRAINT employee_pkey PRIMARY KEY (oid),
+        CONSTRAINT bank_account_oid_fk FOREIGN KEY (bank_account_oid) REFERENCES accounts.bank_account(oid),
+        CONSTRAINT employee_id_unique UNIQUE (employee_id)
+);
+
+
+CREATE TABLE accounts.grade_employee_mapping (
+        oid varchar(128) NOT NULL,
+        employee_oid varchar(128) NOT NULL,
+        grade_oid varchar(128) NOT NULL,
+        applied_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_on timestamp NULL,
+        is_deleted varchar(128) NOT NULL DEFAULT 'No'::character varying,
+        CONSTRAINT grade_employee_mapping_pkey PRIMARY KEY (oid),
+        CONSTRAINT grade_oid_fk FOREIGN KEY (grade_oid) REFERENCES accounts.grade(oid),
+        CONSTRAINT employee_oid_fk FOREIGN KEY (employee_oid) REFERENCES accounts.employee(oid)
+);
+
+
+CREATE TABLE accounts.transactions (
+        oid varchar(128) NOT NULL,
+        transaction_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        debit numeric(20,2) NOT NULL default 0,
+        credit numeric(20,2) NOT NULL default 0,
+        bank_account_oid varchar(128) NOT NULL,
+        created_on timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_on timestamp NULL,
+        is_deleted varchar(128) NOT NULL DEFAULT 'No'::character varying,
+        CONSTRAINT transactions_pk PRIMARY KEY (oid),
+        CONSTRAINT bank_account_oid_fk FOREIGN KEY (bank_account_oid) REFERENCES accounts.bank_account(oid)
+);
+
+
+INSERT INTO accounts.grade ("oid",grade_name,grade_no,basic_salary,created_on,is_deleted) VALUES 
+('cb03af0f-a1e4-4209-81c3-4fc7c82e68bd','Grade Six',6,0.00,'2021-02-26 01:39:53.770','No')
+,('ff05c0d2-c0b4-40dc-bf0c-678e38d424ed','Grade Five',5,0.00,'2021-02-26 01:39:48.127','No')
+,('452612d8-edee-4a1b-94d5-0877e8faa0b2','Grade Four',4,0.00,'2021-02-26 01:39:40.172','No')
+,('c4f11611-1871-4b0b-b6e2-f3a685aa4915','Grade Three',3,0.00,'2021-02-26 01:39:32.640','No')
+,('809755d3-4a8a-4e6f-90c7-ab5412089047','Grade Two',2,0.00,'2021-02-26 01:39:26.813','No')
+,('a7d8ca70-99bc-4ef3-b41d-1cae13a45661','Grade One',1,0.00,'2021-02-26 01:39:17.974','No')
+;

@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53b0e21b-adeb-4017-a421-d5f389d43d9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/container/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/container/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/modules/bank-account/shared/components/bank-add/bank-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/modules/bank-account/shared/components/bank-add/bank-add.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/modules/employee/components/employee-add/employee-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/modules/employee/components/employee-add/employee-add.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="53b0e21b-adeb-4017-a421-d5f389d43d9c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +85,7 @@
       <workItem from="1614498248720" duration="1795000" />
       <workItem from="1614500062296" duration="823000" />
       <workItem from="1614502883638" duration="757000" />
-      <workItem from="1614505468594" duration="417000" />
+      <workItem from="1614505468594" duration="555000" />
     </task>
     <servers />
   </component>

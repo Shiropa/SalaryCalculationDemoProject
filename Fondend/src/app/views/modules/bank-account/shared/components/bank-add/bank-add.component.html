@@ -1,0 +1,47 @@
+<div class="modal-header">
+  <h4 class="modal-title">Bank Employee Account</h4>
+  <button (click)="activeModal.close('Close click')" aria-label="Close" class="close" type="button" style="color: red">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="container" style="margin-top: 20px;">
+
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <form>
+          <div class="form-group">
+
+            <label for="accountName">Account Name</label>
+            <input [(ngModel)]="bank.accountName" aria-describedby="accountNameHelp" class="form-control"
+                   id="accountName" name="accountName" placeholder="Enter Account Holder Name" type="text" required>
+
+            <label for="accountNumber">Account Number</label>
+            <input [(ngModel)]="bank.accountNumber" aria-describedby="accountNumberHelp" class="form-control"
+                   id="accountNumber" name="accountNumber" placeholder="Enter Account Number" type="text" required>
+
+            <label for="accountType">Account type</label>
+            <select name="accountType" id="accountType" class="form-control" [(ngModel)]="bank.accountType" required>
+              <option [value]="'Saving'" >Saving</option>
+              <option [value]="'Current'" >Current</option>
+            </select>
+
+            <label for="bankName">Bank Name</label>
+            <input [(ngModel)]="bank.bankName" aria-describedby="bankNameHelp" class="form-control"
+                   id="bankName" name="bankName" placeholder="Enter Bank Name" type="text" required>
+
+            <label for="branchName">Branch Name</label>
+            <input [(ngModel)]="bank.branchName" aria-describedby="branchNameHelp" class="form-control" id="branchName"
+                   name="branchName" placeholder="Enter Branch Name" type="text" required>
+
+          </div>
+        </form>
+        <button (click)="add()" class="btn btn-primary"><i class="fa fa-save"></i>&nbsp;&nbsp;Save</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--<div class="modal-footer">-->
+<!--  <button (click)="activeModal.close('Close click')" class="btn btn-outline-dark" type="button">Close</button>-->
+<!--</div>-->

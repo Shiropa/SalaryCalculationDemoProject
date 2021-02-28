@@ -1,0 +1,27 @@
+<div class="container" style="margin-top: 70px;">
+
+  <br/>
+  <label style="background: darkviolet; color: white; padding: 5px;"><strong>Company Account</strong></label>
+  <button *ngIf="!bank" class="btn btn-primary pull-right" (click)="accountAdd()"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Account</button>
+  <button *ngIf="bank" class="btn btn-primary pull-right" (click)="add()"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Balance</button>
+  <br/>
+
+  <div *ngIf="bank">
+    <table class="table table-borderless">
+      <tbody>
+      <tr>
+        <td>Account Name</td>
+        <td> {{ bank.accountName}}</td>
+      </tr>
+      <tr>
+        <td>Total Paid</td>
+        <td> {{ bank.totalCredit}}</td>
+      </tr>
+      <tr>
+        <td>Remaining</td>
+        <td> {{ bank.currentBalance}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

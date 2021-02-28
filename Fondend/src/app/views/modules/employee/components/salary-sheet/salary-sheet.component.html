@@ -1,0 +1,46 @@
+
+<script>
+  $(document).ready(function(){
+    $(".show-toast").click(function(){
+      $("#myToast").toast('show');
+    });
+  });
+</script>
+
+<div class="container" style="margin-top: 70px;">
+
+  <br/>
+  <div class="row">
+    <div class="col-md-10">
+      <label style="background: darkviolet; color: white; padding: 5px;"><strong>Salary Sheet</strong></label>
+    </div>
+    <div class="col-md-2 pull-right">
+      <input class="form-check-input" type="checkbox" value="" id="transfer" (change)="transferCheckedChanged($event.target.checked)">
+      <label class="form-check-label" for="transfer">
+        Transfer Salary
+      </label>
+    </div>
+  </div>
+  <br/>
+  <table class="table table-hover">
+    <thead style="background: lightgrey">
+    <tr>
+      <th *ngIf="isTransfer"></th>
+      <th>Employee Name</th>
+      <th>Rank</th>
+      <th>Total Salary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employee of employees">
+
+      <td *ngIf="isTransfer"> <input type="checkbox" (change)="employeeSelection($event.target.checked, employee.oid)"> </td>
+      <td> {{ employee.employeeName }}</td>
+      <td> {{ employee.grade.gradeName }}</td>
+      <td> {{ employee.salary.total }}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button *ngIf="isTransfer" class="btn btn-success pull-right" (click)="transferSalary()" [disabled]="employeeOids.length < 1">
+    <i class="fa fa-send"></i>&nbsp;&nbsp;Transfer</button>
+</div>

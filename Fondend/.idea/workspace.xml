@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53b0e21b-adeb-4017-a421-d5f389d43d9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/org/example/bankAccount/controllers/BankAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/org/example/bankAccount/controllers/BankAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/org/example/bankAccount/database/repositories/BankAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/org/example/bankAccount/database/repositories/BankAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Backend/src/main/java/org/example/bankAccount/services/BankAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Backend/src/main/java/org/example/bankAccount/services/BankAccountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/core/constant/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/core/constant/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/modules/bank-account/components/emp-account-list/emp-account-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/modules/bank-account/components/emp-account-list/emp-account-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/modules/bank-account/components/emp-account-list/emp-account-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/modules/bank-account/components/emp-account-list/emp-account-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/views/modules/bank-account/components/main-account/main-account-view.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/modules/bank-account/components/main-account/main-account-view.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/modules/bank-account/components/main-account/main-account-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/modules/bank-account/components/main-account/main-account-view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/modules/bank-account/services/bank-account.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/modules/bank-account/services/bank-account.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/views/modules/employee/components/employee-add/employee-add.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/modules/employee/components/employee-add/employee-add.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/modules/employee/components/salary-sheet/salary-sheet.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/modules/employee/components/salary-sheet/salary-sheet.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +86,8 @@
       <option name="presentableId" value="Default" />
       <updated>1614497667463</updated>
       <workItem from="1614497673219" duration="177000" />
-      <workItem from="1614498248720" duration="1294000" />
+      <workItem from="1614498248720" duration="1795000" />
+      <workItem from="1614500062296" duration="223000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h4 class="modal-title">Bank Employee Account</h4>
+  <h4 class="modal-title">{{oid ? 'Edit Account Info' : 'Add New Account' }}</h4>
   <button (click)="activeModal.close('Close click')" aria-label="Close" class="close" type="button" style="color: red">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -36,7 +36,7 @@
 
           </div>
         </form>
-        <button (click)="add()" class="btn btn-primary"><i class="fa fa-save"></i>&nbsp;&nbsp;Save</button>
+        <button (click)="add()" class="btn btn-success"><i class="fa fa-save"></i>&nbsp;&nbsp;Save</button>
       </div>
     </div>
   </div>
